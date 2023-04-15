@@ -2,18 +2,10 @@ import numpy as np
 from array import array
 import os, gzip, shutil
 
+
 data = array('f')
 
-#with open("Uf01.bin", "rb") as f:
-    #data = np.fromfile(f)
-    #f.close()
-
-#with open("Uf01.raw", 'wb') as f:
-    #f.write(data)
-    #f.close()
-
-
-dir_name = "C:\\Users\\Matth\\Documents\\Spring2023\\CS5635\\Final-Project\\hurricane\\Isabel_data"
+dir_name = "C:\\Users\\Matth\\Documents\\Spring2023\\CS5635\\Final-Project\\hurricane_data_sets\\Isabel_data\\gz"
 
 def convert_to_raw(fileName):
     raw = ".raw"
@@ -27,7 +19,7 @@ def convert_to_raw(fileName):
     with open(new_file, 'wb') as f:
         f.write(data)
         f.close()
-    
+
 
 def gz_extract(directory):
     extension = ".gz"
